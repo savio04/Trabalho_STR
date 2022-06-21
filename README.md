@@ -4,7 +4,7 @@
 
 **1° passo *(no terminal)*:**
 - Executar o simulador do aquecedor `Aquecedor2021.jar` com duplo clique (terá porta padrão 4545).
-- Ou executar com o script `java -jar .\Aquecedor2021.jar XXXX`, onde `XXXX` é a porta em que se deseja executar.
+- Ou executar com o script `java -jar ./Aquecedor2021.jar XXXX`, onde `XXXX` é a porta em que se deseja executar.
 > Obs.: Lembre-se de estar no diretório do arquivo.
 
 **2° passo *(no terminal)*:**
