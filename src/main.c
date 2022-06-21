@@ -543,7 +543,7 @@ void thread_grava_temp_nivel (void) {
 }
 
 void main( int argc, char *argv[]) {
-	ref_putT(30.0);
+	ref_putT(20.0);
   ref_putH(2.2);
 	REF_TEMP = 30.0;
 	NIVEL_REF = 2.2;
