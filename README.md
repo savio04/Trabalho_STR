@@ -11,6 +11,6 @@
 - Gerar o código objeto do controlador com o script `gcc main.c sensores.c socket.c tela.c referenciaT.c referenciaH.c bufduplo.c -o index.o -lpthread`.
 
 **3° passo *(no terminal)*:**
-- Executar o código objeto do controlador com o script `sudo ./index.o localhost XXXX` oou `./index.o localhost XXXX`, onde `XXXX` é a porta em que está executando o simulador (se for a padrão é 4545).
+- Executar o código objeto do controlador com o script `sudo ./index.o localhost XXXX` ou `./index.o localhost XXXX`, onde `XXXX` é a porta em que está executando o simulador (se for a padrão é 4545).
 
 ---
