@@ -550,7 +550,7 @@ void main( int argc, char *argv[]) {
 
 	cria_socket(argv[1], atoi(argv[2]) );
     
-	int ord_prio[NUM_THREADS]={99,59,1,1,1,55,66};
+	int ord_prio[NUM_THREADS]={99,99,59,1,1,1,55,66};
 	pthread_t threads[NUM_THREADS];
 	pthread_attr_t pthread_custom_attr[NUM_THREADS];
 	struct sched_param priority_param[NUM_THREADS];
@@ -567,6 +567,7 @@ void main( int argc, char *argv[]) {
 	}
 
 	pthread_create(&threads[0], &pthread_custom_attr[0], (void *) thread_controle_temperatura, NULL);
+	pthread_create(&threads[0], &pthread_custom_attr[0], (void *) thread_controle_nivel, NULL);
 	pthread_create(&threads[1], &pthread_custom_attr[1], (void *) thread_le_sensor, NULL);
 	pthread_create(&threads[2], &pthread_custom_attr[2], (void *) thread_alarme, NULL);
 	pthread_create(&threads[3], &pthread_custom_attr[3], (void *) thread_mostra_status, NULL);
