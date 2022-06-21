@@ -13,7 +13,7 @@
 
 #define	NSEC_PER_SEC    (1000000000) 	// Numero de nanosegundos em um segundo
 #define NUM_THREADS	8
-#define N_AMOSTRAS 1000
+#define N_AMOSTRAS 10000
 
 double REF_TEMP = 0.0, NIVEL_REF = 0.0;
 
@@ -88,7 +88,7 @@ void thread_le_sensor (void){ //Le Sensores periodicamente a cada 10ms
 
 void thread_alarme (void){
 	while(1){
-		sensor_alarmeT(REF_TEMP);
+		sensor_alarmeT(30.0);
 		aloca_tela();
 		printf("ALARME\n");
 		libera_tela();
@@ -543,7 +543,7 @@ void thread_grava_temp_nivel (void) {
 }
 
 void main( int argc, char *argv[]) {
-	ref_putT(20.0);
+	ref_putT(30.0);
   ref_putH(2.2);
 	REF_TEMP = 30.0;
 	NIVEL_REF = 2.2;
