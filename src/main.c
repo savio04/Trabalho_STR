@@ -567,13 +567,13 @@ void main( int argc, char *argv[]) {
 	}
 
 	pthread_create(&threads[0], &pthread_custom_attr[0], (void *) thread_controle_temperatura, NULL);
-	pthread_create(&threads[0], &pthread_custom_attr[0], (void *) thread_controle_nivel, NULL);
-	pthread_create(&threads[1], &pthread_custom_attr[1], (void *) thread_le_sensor, NULL);
-	pthread_create(&threads[2], &pthread_custom_attr[2], (void *) thread_alarme, NULL);
-	pthread_create(&threads[3], &pthread_custom_attr[3], (void *) thread_mostra_status, NULL);
-	pthread_create(&threads[4], &pthread_custom_attr[4], (void *) thread_grava_temp_resp, NULL);
-	pthread_create(&threads[5], &pthread_custom_attr[5], (void *) thread_altera_valores, NULL);
-	pthread_create(&threads[6], &pthread_custom_attr[6], (void *) thread_grava_temp_nivel, NULL);
+	pthread_create(&threads[1], &pthread_custom_attr[1], (void *) thread_controle_nivel, NULL);
+	pthread_create(&threads[2], &pthread_custom_attr[2], (void *) thread_le_sensor, NULL);
+	pthread_create(&threads[3], &pthread_custom_attr[3], (void *) thread_alarme, NULL);
+	pthread_create(&threads[4], &pthread_custom_attr[4], (void *) thread_mostra_status, NULL);
+	pthread_create(&threads[5], &pthread_custom_attr[5], (void *) thread_grava_temp_resp, NULL);
+	pthread_create(&threads[6], &pthread_custom_attr[6], (void *) thread_altera_valores, NULL);
+	pthread_create(&threads[7], &pthread_custom_attr[7], (void *) thread_grava_temp_nivel, NULL);
 
 	for(int i=0;i<NUM_THREADS;i++){
 		pthread_join(threads[i], NULL);
